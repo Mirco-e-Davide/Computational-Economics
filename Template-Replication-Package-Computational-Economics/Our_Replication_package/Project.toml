@@ -1,0 +1,14 @@
+name = "Our_Replication_package"
+uuid = "39a57102-1dbc-4ffe-a247-7049b4fb6c0c"
+version = "0.1.0"
+authors = ["mirco "]
+
+[deps]
+ADTypes = "47edcb42-4c32-4615-8424-f2b9edc5f35b"
+DifferentialEquations = "0c46a032-eb83-5123-abaf-570d42b7fbaa"
+Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
+
+[compat]
+ADTypes = "1.22.0"
+DifferentialEquations = "8.0.0"
+Plots = "1.41.6"
