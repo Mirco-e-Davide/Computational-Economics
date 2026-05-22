@@ -25,15 +25,17 @@ jobs:
         uses: quarto-dev/quarto-actions/setup@v2
 
       - name: Render report
+        working-directory: ./Template-Replication-Package-Computational-Economics
         run: quarto render report.qmd --to html --output index.html --output-dir _site
 
       - name: Disable Jekyll
+        working-directory: ./Template-Replication-Package-Computational-Economics
         run: touch _site/.nojekyll
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: Template-Replication-Package-Computational-Economics/_site
 
   deploy:
     needs: build
