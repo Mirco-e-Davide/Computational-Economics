@@ -1,53 +1,29 @@
-# CompEcon Project Template 
+# Replication of 'A Macroeconomic Model with a Financial Sector'
 
-This is the replication project template. 
+This repository contains a full computational replication of the foundational macroeconomic model presented by Markus K. Brunnermeier and Yuliy Sannikov (AER, 2014).
 
-## Step Number 1
+**Authors:**
+* Mirco Tucci (mirco.tucci@carloalberto.org) - Polytechnic University of Turin, Collegio Carlo Alberto
+* Davide Raciti (davide.raciti@carloalberto.org) - Polytechnic University of Turin, Collegio Carlo Alberto
 
-* Click top right on `use this template`, then `create a new repository`.
-* Choose a suitable name for your replication project.
-* Clone your new repository to your computer.
-* Open this locally in VScode.
+**Course:**
+This project was developed for the [Computational Economics Course](https://floswald.github.io/CompEcon/) in the PhD program at Collegio Carlo Alberto, taught by Prof. Florian Oswald.
 
-(you get a nice preview of this document in VScode by executing command `Markdown: Open preview` - type this into the command 😉 )
+---
 
-This page should contain concise information for how to
+## Overview of the Project
+This package uses Julia to simulate the highly non-linear boundary value problem at the core of the Brunnermeier and Sannikov model. We utilize a precise Bisection and Shooting Method coupled with the Runge-Kutta solver Tsit5 to capture the unstable saddle-path dynamics of the economy's financial sector.
 
-1. install your julia package
-2. run the unit tests
-3. run the replication output (there needs to be a single entry point that runs everything, ideally called `run_all()`)
-4. gives instructions for how to compile and where to see your replication [report](report.qmd). See [https://quarto.org](https://quarto.org) for instructions for how to use quarto.
+The package successfully replicates:
+* **Figure 1:** Macroeconomic and financial variables with respect to experts' wealth share ($\eta$).
+* **Figure 2:** The utility frontier between households and experts.
 
-## First steps
+---
 
-1. Copy the original replication package into the folder `replication-package`
-2. (optional) follow instructions in `replication-package` to replicate desired exhibits
-3. set up your julia package in this repo. To do so, start the julia REPL in this location (alt-J alt-O, otherwise look in command palette)
-4. Choose a name for your replication package, for example `XYZ.jl` (choose something better and replace `XYZ` throughout with your choice!)
-5. Generate your julia package in this directory with
-   
-    ```julia
-    using Pkg
-    Pkg.generate("XYZ.jl")
-    ```
-6. In the VScode file browser on the left, investigate the newly created directory
-7. Activate your package:
-   
-    ```julia
-    julia> Pkg.activate("XYZ.jl")
+## How to Run the Code
 
-    # load it
-    julia> using XYZ
+To run this replication on your local machine, you need **Julia (v1.10+)**.
 
-    # run function
-    julia> XYZ.greet()
-    Hello World!
-    ```
-8. Edit the code in `XYZ.jl/src/XYZ.jl`, maybe adding a word to the greet function. Save the file. Call the function again.
-   
-    ```julia
-    julia> XYZ.greet()
-    Hello World, Earthlings!
-    ```
+From the Julia REPL, position yourself in the folder Template-Replication-Package-Computational-Economics with 'cd("Template-Replication-Package-Computational-Economics")'. Then you should type 'using Pkg', then 'Pkg.activate("Our_Replication_package")', 'using Our_Replication_package', 'results= Our_Replication_package.run_all()'. If you want to visualize the plots you can write 'display(results.figure1)' and 'display(results.figure2)'
 
 
