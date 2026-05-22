@@ -93,6 +93,7 @@ Here are the original package's computational requirements:
 
 ![Paper version](images/figure2original.png)
 
+
 ![Replicated version](images/figure2.png)
 
 
